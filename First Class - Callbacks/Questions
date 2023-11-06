@@ -1,0 +1,17 @@
+# EASY LEVEL
+
+1. Write a function that takes another function as an argument and calls it.
+2. Create a function that returns another function.
+3. Demonstrate how to store a function in a variable and then call it.
+4. Write a function that takes an array and a callback function as arguments, and applies the callback to each element of the array.
+5. Implement a function that accepts a number and a callback function, and then performs a mathematical operation on the number, using the callback.
+6. Create a higher-order function that takes a function and a number as arguments and calls the function multiple times based on the number passed.
+7. Develop a function that uses a callback to check if a given number is even or odd.
+8. Use a callback to convert an array of strings to uppercase.
+9. Implement a function that sorts an array of numbers using a callback for comparison.
+10. Write a function that accepts a string and a callback to remove any special characters from the string.
+11. Create a function that filters an array of objects based on a condition provided in a callback.
+12. Develop a function that finds the sum of all elements in an array using a callback.
+13. Use a callback to find the maximum value in an array of numbers.
+14. Implement a function that performs an asynchronous operation and uses a callback to handle the result.
+

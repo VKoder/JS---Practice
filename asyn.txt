@@ -1,0 +1,33 @@
+
+//Synchronus js
+JavaScript is single-threaded, meaning it can only do one thing at a time.
+It executes code sequentially, one statement at a time.
+
+//Asynchronous js
+Asynchronous JavaScript (Async JS) is a programming approach that allows tasks to run independently
+*in the background, without blocking the main program's execution. It enables non-blocking behavior,
+making it possible to efficiently handle time-consuming operations like fetching data from the internet,
+processing large files, or responding to user interactions while keeping the application responsive.
+Async JS uses techniques like callbacks, promises, and async/await to manage and coordinate these
+asynchronous tasks, ensuring smoother and more efficient code execution.
+
+
+//Call Stack:
+Think of the call stack as a stack of tasks that the JavaScript engine needs to perform.
+When a function is called, it's added to the stack, and when it's done, it's removed from the stack.
+
+
+//Event Loop and Callback Queue:
+JavaScript often has to deal with asynchronous tasks, like timers, network requests, or user events.
+These tasks are managed by the event loop and the callback queue.
+The event loop continuously checks the call stack and the callback queue.
+
+
+//Handling Asynchronous Tasks:
+When an asynchronous task is encountered (e.g., setTimeout, an event listener, or a promise), it's scheduled 
+to run in the future. The event loop checks if the call stack is empty. If it is, it takes the next task from
+ the callback queue and puts it into the call stack for execution.
+
+ The event loop monitors the callback queue and pushes tasks into the call stack when it's empty, allowing 
+ JavaScript to handle asynchronous tasks without blocking the main thread. However, it doesn't interrupt the 
+ execution of the global execution context; it waits for it to finish before processing asynchronous tasks.
