@@ -5,4 +5,5 @@ function a(){
     console.log(x);
     var x= 2232;
 }
+console.log(x)
 a();

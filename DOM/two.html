@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - CREATING THE ELEMS</title>
+    <style>
+        *{
+            background-color: #515151;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // Craeting ELEMENTS USING FUNCTION
+        function createDiv(createElem ,createClass,createId,color,padding,createText){
+            const div = document.createElement(createElem);
+            div.className = createClass;
+            div.id = createId;
+            div.style.backgroundColor = color;
+            div.style.padding = `${padding}px`;
+            const addText = document.createTextNode(createText)
+            div.appendChild(addText);
+            document.body.appendChild(div);
+        }
+        createDiv('div', 'container', 'main2', 'blue', '12', 'hdlshhflkdshl');
+
+
+
+
+     
+        // How to craete elements by using DOM
+        const div = document.createElement("div")
+        console.log(div)
+        div.className = "con";
+        div.id = "main";
+        div.setAttribute("title", "i am main");
+        div.style.backgroundColor = "green";
+        div.style.padding = "12px 30px";
+        
+        const addText = document.createTextNode("Namaste Javascript")
+        div.appendChild(addText)
+        document.body.appendChild(div)
+
+       
+
+    </script>
+</body>
+</html>

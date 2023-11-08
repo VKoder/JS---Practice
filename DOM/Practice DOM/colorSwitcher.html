@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice DOM</title>
+    <style>
+        button{
+            padding: 20px 50px;
+        }
+        #blue{
+            background-color: blue;
+        }
+        #grey{
+            background-color: grey;
+        }
+        #yellow{
+            background-color: yellow;
+        }
+        #pink{
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Color Switcher</h1>
+    <button id="blue"></button>
+    <button id="grey"></button>
+    <button id="yellow"></button>
+    <button id="pink"></button>
+
+   <script>
+
+        const buttons = document.querySelectorAll("button");
+        console.log(buttons)
+
+        buttons.forEach(element => {
+            element.addEventListener("click", (e)=>{
+                console.log(e.target.id)    // we'll get the id of that particular buttton
+
+                if (e.target.id === "blue") {
+                    document.body.style.backgroundColor = "blue"
+                }
+
+                if (e.target.id === "grey") {
+                    document.body.style.backgroundColor = "grey"
+                }
+                
+                if (e.target.id === "yellow") {
+                    document.body.style.backgroundColor = "yellow"
+                }
+
+                if (e.target.id === "pink") {
+                    document.body.style.backgroundColor = "pink"
+                }
+            })
+        });
+
+   </script>
+</body>
+</html>

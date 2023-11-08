@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - </title>
+    <style>
+        *{
+            background-color: #515151;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <ul class="languages">
+        <li>Javascript</li>
+    </ul>
+
+
+    <script>
+        //BY MANUALLY 
+        const ul = document.querySelector(".languages");
+        const  li = document.createElement("li");
+        const addText = document.createTextNode("React")
+        li.appendChild(addText)
+        ul.appendChild(li)
+        console.log(ul)
+
+        //BY DIRECTLY USING FUNCTION
+        function createLi (yourText){
+            const ul = document.querySelector(".languages");
+            const li = document.createElement("li");
+            const addText = document.createTextNode(yourText);
+            li.appendChild(addText);
+            ul.appendChild(li);
+        }
+        createLi("Angular")
+        createLi("Vue")
+    </script>
+</body>
+</html>
