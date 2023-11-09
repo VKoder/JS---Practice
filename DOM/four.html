@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Four Dom Practice</title>
+</head>
+<body style="background-color: black; color: white;">
+   <div id="formSection"></div>
+       <script>
+        // //  1) Create a new paragraph element and add it to the body of the document.
+        //     const p = document.createElement('p');
+        //     const addText = document.createTextNode("Hey i am p added by dom")
+        //     p.appendChild(addText)
+        //     document.body.appendChild(p)
+
+        // // 2) Access an existing element by its ID and change its text content.
+        //     const btn = document.getElementById("btn")
+        //     btn.innerHTML = "i am not a button"
+
+        // // 3) Create an unordered list (ul) with three list items (li) and append it to a div.
+        // const div = document.createElement('div');
+        // const ul = document.createElement('ul');
+        // const li1 = document.createElement('li');
+        // const li2 = document.createElement('li');
+        // const li3 = document.createElement('li');
+        // ul.appendChild(li1);
+        // ul.appendChild(li2);
+        // ul.appendChild(li3);
+        // div.appendChild(ul);
+        // console.log(div);
+
+        // // 4) Remove a specific element from the DOM when a user performs a certain action.
+        //     btn.addEventListener("click", function(){
+        //         p.remove()
+        //     })
+
+
+       // 5) Append an image to a div element with a specific ID.
+            // const div = document.getElementById('myDiv');
+            // const img = document.createElement('img');
+            // img.src = 'https://via.placeholder.com/150'; // Replace with the actual image URL
+            // div.appendChild(img);
+
+        
+        // 6) Change the font size of all paragraphs on the page when the page loads.
+
+                // const p = document.createElement('p')
+                // p.className = "pp"
+                // const addText = document.createTextNode("kjdsjfhljslefjlesfljhsdjlhh")
+                // p.appendChild(addText)
+                // document.body.appendChild(p)
+                // console.log(p)
+                // document.addEventListener("load",()=>{
+                //     const a = document.querySelector(".pp");
+                //     a.style.fontSize = "80px";
+                // })
+
+
+        
+        // 7) Create a form dynamically with input fields and a submit button, and append it to a specific section of the document.
+        const formSection = document.getElementById('formSection');
+        const form = document.createElement('form');
+        const input = document.createElement('input');
+        const btn = document.createElement('button');
+
+        input.setAttribute('type', 'text');
+        input.setAttribute('label', 'inputText');
+        input.setAttribute('name', 'inputText');
+        input.setAttribute('id', 'inpy');
+        btn.setAttribute('type', 'submit');
+        btn.textContent = 'Submit';
+
+        form.appendChild(input);
+        form.appendChild(btn);
+        formSection.appendChild(form);
+
+        console.log(formSection);
+
+        console.log(btn)
+        form.addEventListener("submit", function(event){
+            event.preventDefault();
+             
+            if (input.value == '' || email.value == '' || pass.value == ''){
+                alert("bbkdshhdkjlh")
+            }
+            else{
+                console.log(document.getElementById("inpy").value);
+            }
+
+           
+        });
+
+
+
+
+        // Create multiple input fields of different types, such as text, email, and password, and append them to the form.
+
+            const email = document.createElement('input')
+            email.setAttribute("type", "email")
+            email.setAttribute("placeholder", "Enter your email..")
+            form.appendChild(email)
+
+            const pass = document.createElement("input")
+            pass.setAttribute("type", "password")
+            pass.setAttribute("placeholder", "Enter your password..")
+            form.appendChild(pass)
+
+
+           
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
