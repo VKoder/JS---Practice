@@ -86,6 +86,9 @@
             }
             else{
                 console.log(document.getElementById("inpy").value);
+                input.value =''
+                email.value = ''
+                pass.value = ''
             }
 
            
@@ -107,14 +110,40 @@
             form.appendChild(pass)
 
 
-           
+            // Dropdown select element
+            const select = document.createElement('select');
+            const option1 = document.createElement('option');
+            const option2 = document.createElement('option');
+            option1.text = 'Option 1';
+            option2.text = 'Option 2';
+            select.appendChild(option1);
+            select.appendChild(option2);
+            form.appendChild(select)
+
+            const checkbox1 = document.createElement('input')
+            const nn = document.createTextNode('i am check 1');
+            checkbox1.appendChild(nn)
+            checkbox1.setAttribute("type", "checkbox")
+            checkbox1.setAttribute("name", "checkbox")
+
+            const checkbox2 = document.createElement('input')
+            checkbox2.setAttribute("type", "checkbox")
+            checkbox2.setAttribute("name", "checkbox")
+
+            form.appendChild(input);
+            form.appendChild(select);
+            form.appendChild(checkbox1);
+            form.appendChild(document.createTextNode('Checkbox 2'));
+            form.appendChild(checkbox2);
+            form.appendChild(btn);
+            formSection.appendChild(form);
 
 
 
 
 
 
-
+       
 
     </script>
 </body>
