@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Color - Set Intervals</title>
+</head>
+<body>
+    <button id="btn1">Start</button>
+    <button id="btn2">Stop</button>
+    <script>
+        const btn1 = document.getElementById("btn1")
+        const btn2 = document.getElementById("btn2")
+
+       
+        // btn2.addEventListener(function(){
+        //     clearInterval(btn1)
+        // })
+       
+        // Create a Random Hex Color Gen
+             
+       
+
+        function genColor() {
+            let storingVar = "#";
+                for (let i = 0; i < 6; i++) {
+                    const hexNum = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F'];
+                    const random = Math.floor(Math.random() * hexNum.length);
+                    const hexcode = hexNum[random];
+                    storingVar += hexcode;
+                    console.log(storingVar)
+                    document.body.style.backgroundColor = storingVar;
+            }
+        }
+
+        let intervalId;
+        let clearId;
+
+
+        btn1.addEventListener("click", function() {
+            intervalId = setInterval(genColor, 2000);
+        });
+
+       btn2.addEventListener("click", function(){
+            clearId = clearTimeout(intervalId);
+            // document.body.style.backgroundColor = ''
+       })
+    </script>
+</body>
+</html>
