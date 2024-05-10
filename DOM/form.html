@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation using Js</title>
+    <style>
+        body{
+            background-color: gray;
+        }
+        .form{
+            display: flex;
+            flex-direction: column;
+            width: 30vw;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form class="form">
+        <h1>Form Validation</h1>
+        <input type="text" name="name" placeholder="Enter your name"></input>
+        <input type="email" name="email" placeholder="Enter your email"></input>
+        <input type="password" name="password" placeholder="Enter your password"></input>
+        <button onclick="validate(event)">Submit</button>
+    </form>
+
+    <script>
+        function validate (event){
+
+            event.preventDefault(); 
+           const name = document.querySelector('[name="name"]').value;
+           const pass = document.querySelector('[name="password"]').value;
+           const email = document.querySelector('[name="email"]').value;
+
+           if (name == "") {
+            alert("Name cannot be empty");
+            return false;
+           }
+            if (email == "") {
+            alert("Email cannot be empty")
+            return false;
+           }
+            if (pass == "") {
+            alert("Password cannot be empty")
+            return false;
+           }
+           else{
+            alert("Submitted")
+           }
+            
+        }
+    </script>
+</body>
+</html>

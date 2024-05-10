@@ -85,3 +85,25 @@ mainouter();
 
 //THUS x ,a , y and z are accessible within the scope of the inner function due to the concept of closures.
 //(it has the access of its and its parents lexical scope)
+
+
+
+
+//6.1
+console.log(yup)
+
+function yup(){
+  var f = "hero"
+  console.log(f)
+}
+
+
+
+
+//6.2
+console.log(yup())
+
+function yup(){
+  var f = "hero"
+  console.log(f)
+}
