@@ -6,4 +6,3 @@ function greet(name){
 console.log(greet("vivek"))
 
 
-//checking git
